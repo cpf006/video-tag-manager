@@ -2,16 +2,14 @@
   <div id="video-manager">
     <h4>Name: {{metaData.metadata.name}}<br>Time: {{ time }}<br>Remaining Time : {{ remainingTime }}</h4>
     <el-container>
-        <videoPlayer 
-          class="vjs-custom-skin"
-          ref="videoPlayer"
-          :options="playerOptions"
-          :playsinline="true"
-          @timeupdate="onPlayerTimeupdate($event)"
-        >
-        </videoPlayer>
-    </el-container>
-    <el-container>
+      <videoPlayer 
+        class="vjs-custom-skin"
+        ref="videoPlayer"
+        :options="playerOptions"
+        :playsinline="true"
+        @timeupdate="onPlayerTimeupdate($event)"
+      >
+      </videoPlayer>
       <el-table :data="asrWord">
         <el-table-column label="Asr Word">
           <el-table-column
@@ -25,19 +23,17 @@
         <el-table-column label="Named Entities">
           <el-table-column
             prop="entity_name"
-            label="entity_name"
+            label="Entity Name"
             width="180">
           </el-table-column>
           <el-table-column
             prop="entity_type"
-            label="entity_type"
+            label="Entity Type"
             width="180">
           </el-table-column>
         </el-table-column>
       </el-table>
-    </el-container>
-        <el-container>
-      <el-table :data="onScreenText">
+            <el-table :data="onScreenText">
         <el-table-column label="On Screen Text">
           <el-table-column
             prop="ocr_string"
@@ -46,6 +42,8 @@
           </el-table-column>
         </el-table-column>
       </el-table>
+    </el-container>
+    <el-container>
       <el-table :data="recognizedPeople">
         <el-table-column label="Recognized People">
           <el-table-column
@@ -60,8 +58,6 @@
           </el-table-column>
         </el-table-column>
       </el-table>
-    </el-container>
-        <el-container>
       <el-table :data="scenes">
         <el-table-column label="Scenes">
           <el-table-column

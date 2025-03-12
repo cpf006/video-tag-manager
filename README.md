@@ -41,6 +41,3 @@ npm run build
 npm run lint
 ```
 
-### Screenshot
-![Alt text](/example.png?raw=true "Title")
-
